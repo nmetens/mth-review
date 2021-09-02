@@ -1,0 +1,27 @@
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.mth-classes {
+    display: grid;
+    gap: 10px;
+
+    box-sizing: border-box;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+.mth-item {
+    font-size: larger;
+    background-color: rgb(161, 224, 66);
+    padding: 10px;
+    border: 2px solid white;
+}
+
+.mth-item:hover {
+    border: 2px solid black;
+}

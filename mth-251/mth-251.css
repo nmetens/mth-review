@@ -1,0 +1,11 @@
+
+.accordion {
+    display: grid;
+    gap: 20px;
+    /* box-sizing: border-box; */
+}
+
+.accordion-item .accordion-header .accordion-button{
+    background-color: greenyellow;
+    color: black;
+}
