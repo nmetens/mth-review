@@ -1,13 +1,14 @@
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+    color: whitesmoke;
 }
 
 .mth-classes {
     display: grid;
     gap: 10px;
 
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
@@ -17,11 +18,19 @@ h1 {
 
 .mth-item {
     font-size: larger;
-    background-color: rgb(161, 224, 66);
+    background-color: gray;
+    /* color: whitesmoke; */
     padding: 10px;
     border: 2px solid white;
 }
 
 .mth-item:hover {
     border: 2px solid black;
+}
+.nav-link {
+    color: whitesmoke;
+}
+
+.nav-link:hover {
+    color:black;
 }

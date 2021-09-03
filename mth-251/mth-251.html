@@ -25,48 +25,76 @@
     <script src="mth-251.js"></script>
     <!-- Inlcude css: -->
     <link rel="stylesheet" href="mth-251.css">
+
+    <!-- Background image: -->
+    <link rel="stylesheet" href="../background.css">
+
+    <!-- Latex scripts: -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-light bg-dark fixed-top"></nav>
+    <!-- <nav class="navbar navbar-light bg-dark fixed-top"></nav> -->
+    <h1 class="mt-3">MTH 251 - Practice Problems</h1>
 
     <div class="accordion mt-5" id="accordionExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
+        <!-- Exercise #1: -->
+        <div class="accordion-item problem1">
+            <h2 class="accordion-header" id="heading1">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Fint the derivative of f(x) = 5x + 3
+                    data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                    <p class="question"> Use the product rule to calculate the derivative: \[~ f(x) = x^3(2x^2+1)\]</p>
                 </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                    that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                    does limit overflow.
+                    Step 1: Remember the product rule itself, \[D{[f(x)g(x)]} = f(x)g'(x) + f'(x)g(x)\]
+                    Step 2: We have \(f(x) = x^3(2x^2+1)\), so let's apply the product rule (we can simplify this as
+                    \(u'*v'=u*v'+ u'*v\)). <br><br>
+                    Step 3: Let u = \(x^3\) be \(u\) and v = \((2x^2+1)\). <br><br>
+                    = \(3x^2*(2x+1) + x^3*(4x+0)\) <br><br>
+                    = \(6x^4 + 3x^2 + 4x^4\) <br><br>
+                    = \(10x^4 + 3x^2\) <br><br>
                 </div>
             </div>
         </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
+        <!-- Exercise #2: -->
+        <div class="accordion-item problem2">
+            <h2 class="accordion-header" id="heading2">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Derivatives
+                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    <p class="question">Use the quotient rule to derive: \[~g(x) = \frac{1}{1+e^x}\]</p>
                 </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                    that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                    does limit overflow.
+                    Step 1: Remember the quotient rule itself, so we have \(\frac{f'}{g'} = \frac{gf' - fg'}{g^2}\)
+                    \[g'(x) = \frac{(1+e^x)0 - 1(e^x)}{(1+e^x)^2}\]
+                    \textit{Step 2 (final step)}: Simplify,
+                    \[g'(x) = \frac{-e^x}{(1+e^x)^2}\]
+                </div>
+            </div>
+        </div>
+        <!-- Exercise #3: -->
+        <div class="accordion-item problem3">
+            <h2 class="accordion-header" id="heading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    <p class="question">Use the quotient rule to derive: \(~g(x) = \frac{1}{1+e^x}\)</p>
+                </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Step 1: Remember the quotient rule itself, so we have \(\frac{f'}{g'} = \frac{gf' - fg'}{g^2}\)
+                    \[g'(x) = \frac{(1+e^x)0 - 1(e^x)}{(1+e^x)^2}\]
+                    \textit{Step 2 (final step)}: Simplify,
+                    \[g'(x) = \frac{-e^x}{(1+e^x)^2}\]
                 </div>
             </div>
         </div>

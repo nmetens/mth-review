@@ -1,11 +1,19 @@
+h1 {
+    text-align: center;
+    color: whitesmoke;
+}
 
 .accordion {
     display: grid;
     gap: 20px;
-    /* box-sizing: border-box; */
 }
 
-.accordion-item .accordion-header .accordion-button{
-    background-color: greenyellow;
-    color: black;
+.accordion-button{
+    background-color: gray;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.question {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
