@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mth-254</title>
+
+     <!-- Bootstrap links: -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+     crossorigin="anonymous"></script>
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+     crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <!-- Latex scripts: -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+    <link rel="stylesheet" href="../background.css">
+    <link rel="stylesheet" href="MTH-254.css">
+
+</head>
+<body>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                Find an equation for the plane containing the following points: (0,3,2), (4,-1,2), and (1,-1,-3)
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                Let the points P = (0,3,2), Q = (4,-1,2), R = (1,-1,-3) be on the 3D coordinate plane
+
+                Now let's find the vector between points P and Q (Note you could also do Q and P, the order does not matter):
+                
+                \[\overrightarrow{PQ}~=~<4-0,-1-3,~2-2>\]
+                \[=~<4,-4,~0>\]
+                And the vector between points P and R (you can also do R and P, Q and R, or R and Q):
+                \[\overrightarrow{PR}~=~<1-0,-1-3,-3-2>\]
+                \[=~<1,-4,-5>\]
+                
+                Now we have two vectors in a plane. Next, we find the normal vector to this plane. We do this by computing the cross product of the vectors \(\overrightarrow{PQ}\) and \(\overrightarrow{PR}\) (remember to follow the matrix co-factor sign pattern):
+                
+                \[\overrightarrow{PQ}~X~\overrightarrow{PR}~=~
+                \begin{vmatrix}
+                \overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k}\\
+                4 & -4 & 0\\
+                1 & -4 & -5
+                \end{vmatrix}~=~\overrightarrow{n}\]
+                
+                \[=~\overrightarrow{i}((-4*-5)-(-4*0))-\overrightarrow{j}((4*-5)-(1*0))+\overrightarrow{k}((4*-4)-(1*-4))\]
+                \[=~\overrightarrow{i}(20-0)-\overrightarrow{j}(-20)-0)+\overrightarrow{k}(-16)--4)\]
+                \[=~\overrightarrow{i}(20)-\overrightarrow{j}(20)+\overrightarrow{k}(-12)\]
+                \[\overrightarrow{n}~=~<20,20,-12>\]
+                
+                Now that we solved for the normal vector, we can pick any of the points on the plane (P, Q, or R). I will pick point P but you can pick any of them and the answer will still be correct. Then we put the point and the normal vector in the vector form line equation (\overrightarrow{r}(t)=<x_0,y_0,z_0>+t(a,b,c)):
+                
+                \[\overrightarrow{r}(t)=\overrightarrow{n}+tP\]
+                \[\overrightarrow{r}(t)=<20,20,-12>+t(0,3,2))\]
+                
+                \[\Rightarrow~20(x-0)+20(y-3)-12(z-2)=0\]
+                \[\Rightarrow~20x-0+20y-60-12z+24=0\]
+                \[\Rightarrow~20x+20y-12z=36\]
+                \[\Rightarrow~\frac{5}{4}x+\frac{5}{4}y+\frac{-3}{4}x=\frac{9}{4}\]
+                
+                \[\]
+                And thus, the equation of the plane is:\(~5x+5y-3x=9\)
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                Find the parametrization of the tangent line with respect to the following space curve when t = 1:
+                \[\overrightarrow{r}(t)=<\cos{(\frac{\pi}{2}t)},~\sin{(\frac{\pi}{2}t)},~t>\]
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+                We know that the parametrization of the tangent line is: \(\overrightarrow{L}(t)=\overrightarrow{r}(t_0)+t*\overrightarrow{r}'(t_0)\)
+
+                Let's solve for \overrightarrow{r}'(t):
+                \[\]
+                Let \(a = \cos{(\frac{\pi}{2}t)},~b =  \sin{(\frac{\pi}{2}t)},\) and \(c = t\)
+                \[\overrightarrow{r}'(t)=<-\sin{(\frac{\pi}{2}t)},~\sin{(\frac{\pi}{2}t)},~t>\]
+                \[\]
+                
+                Then \(a' = -\sin{(\frac{\pi}{2}t)(\frac{\pi}{2}})\), \(b' =  \cos{(\frac{\pi}{2}t})(\frac{\pi}{2})\), and \(c' = 1\).
+                
+                So \(\overrightarrow{r}'(t)=<-\sin{(\frac{\pi}{2}t)(\frac{\pi}{2}}),~\cos{(\frac{\pi}{2}t})(\frac{\pi}{2}),~1>\)
+                
+                Now, we let t = 1
+                
+                \textit{Thus, we can find both \(\overrightarrow{r}(t)\) and \(\overrightarrow{r}'(t)\) when t = 1:}
+                
+                \[\overrightarrow{r}(1)=<\cos{(\frac{\pi}{2}(1))},~\sin{(\frac{\pi}{2}(1))},~(1)>\]
+                
+                \[\overrightarrow{r}(1)=<\cos{(\frac{\pi}{2})},~\sin{(\frac{\pi}{2})},~1>\]
+                
+                \[\overrightarrow{r}(1)=<~0,~1,~1>\]
+                
+                
+                \(\overrightarrow{r}'(t)=<-\sin{(\frac{\pi}{2}(1))(\frac{\pi}{2}}),~\cos{(\frac{\pi}{2}(1)})(\frac{\pi}{2}),~1>\)
+                
+                \(\overrightarrow{r}'(t)=<-\frac{\pi}{2},~0,~1>\)
+                \[\]
+                Finally, we have our answer: \(\overrightarrow{L}(t)=<~0,~1,~1>+~t~*<-\frac{\pi}{2},~0,~1>\)
+                
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              Find the direction in which \(f(x,y,z)=y^2x+xz+\ln(y^2z)\) increases the fastest at the point P=(3,2,1). What is the maximum rate of increase of this directional vector?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+                Let's start by finding the directional derivative of the function (gradient). To do this, we simply find the partial derivatives of \(f(x,y,z)\):
+
+                \[\frac{\partial}{\partial x}f(x,y,z) = y^2+z\]
+                \[\frac{\partial}{\partial y}f(x,y,z) = 2yx+\frac{1}{y^2z}(2yz) = 2yx+\frac{2}{y}\]
+                \[\frac{\partial}{\partial z}f(x,y,z) = x + \frac{1}{y^2z}(y^2) = x + \frac{1}{z}\]
+                
+                Thus, we have the following gradient vector:
+                \[\nabla f(x,y,z)~=~<\frac{\partial}{\partial x},~\frac{\partial}{\partial x},~\frac{\partial}{\partial x}>\]
+                \[\nabla f(x,y,z)~=~<y^2+z,~2yx+\frac{2}{y},~x + \frac{1}{z}>\]
+                
+                Next, we can find the vector at the given point \(P=(3,2,1)\) that has the fastest increasing rate by plugging in the point's values into our gradient vector:
+                \[\nabla f_p(x,y,z)~=~<2^2+1,~2(2)(3)+\frac{2}{2},~3 + \frac{1}{1}>\]
+                \[\nabla f_p(x,y,z)~=~<5,~12+1,~3+1>\]
+                \[\nabla f_p(x,y,z)~=~<5,~13,~4>\]
+                
+                Now, to find the maximum rate of increase of this vector, we find its magnitude:
+                \[||\nabla f_p(x,y,z)||~=~\sqrt{(5)^2+(13)^2+(4)^2}~=~\sqrt{(25)+(169)+(16)}~=~\sqrt{210}\]
+                
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
